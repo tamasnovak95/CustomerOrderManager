@@ -17,6 +17,7 @@ D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\Customer
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\CustomerOrderManager.csproj.CoreCompileInputs.cache
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\CustomerOrderManager.MvcApplicationPartsAssemblyInfo.cs
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\CustomerOrderManager.MvcApplicationPartsAssemblyInfo.cache
+D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\CustomerOrderManager.sourcelink.json
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\staticwebassets.build.json
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\staticwebassets.development.json
 D:\Projektek\CustomerOrderManager\CustomerOrderManager\obj\Debug\net8.0\staticwebassets\msbuild.CustomerOrderManager.Microsoft.AspNetCore.StaticWebAssets.props
