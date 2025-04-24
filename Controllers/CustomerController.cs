@@ -1,27 +1,43 @@
 using Microsoft.AspNetCore.Mvc;
 using CustomerOrderManager.Models;
+using CustomerOrderManager.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CustomerOrderManager.Controllers
 {
+
+
+
+   
     [ApiController]
     [Route("api/[controller]")]
     public class CustomerController : ControllerBase
     {
-        private static List<Customer> _customers = new()
-        {
-            new Customer { Id = 1, Name = "Tomi", Email = "Tomi@example.com", Phone = "123-456-7890" },
-            new Customer { Id = 2, Name = "Dénes", Email = "Denes@example.com", Phone = "987-654-3210" }
-        };
 
-        [HttpGet]
-        public ActionResult<IEnumerable<Customer>> GetAll() => Ok(_customers);
+        private readonly ApplicationDbContext _context;
 
-        [HttpPost]
-        public ActionResult AddCustomer(Customer customer)
+          public CustomerController(ApplicationDbContext context)
         {
-            customer.Id = _customers.Count + 1;
-            _customers.Add(customer);
+            _context = context;
+        }
+
+           [HttpGet]
+        public async Task<ActionResult<IEnumerable<Customer>>> GetAll()
+        {
+            return await _context.Customers.ToListAsync();
+        }
+
+          [HttpPost]
+        public async Task<ActionResult<Customer>> AddCustomer(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetAll), new { id = customer.Id }, customer);
         }
+       
+
+       
     }
+
+    
 }
