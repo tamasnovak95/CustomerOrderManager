@@ -2,7 +2,7 @@
 A simple .NET 7 Web API project for managing customers and orders.  
 ## Tech Stack
 - ASP.NET Core 7 Web API
-- In-memory data (no database yet)
+- SQLite, EF Core
 - Swagger UI for testing
 
 ## Features
